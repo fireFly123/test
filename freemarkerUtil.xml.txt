@@ -22,4 +22,11 @@ public class aaa {
         System.out.println(result.toString());  
     }  
       
+
+    public static void messageFormat(){
+		String format = "你好，{0}，欢迎再次光临{1}！今天是你第{2}次进入。";
+		String str = MessageFormat.format(format, "小东", "博客园", 5);
+		System.out.println(str);
+	    
+	}
 }  
