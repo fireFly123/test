@@ -1,0 +1,25 @@
+package com.thinkgem.jeesite.test.test;  
+  
+import java.io.IOException;  
+import java.io.StringReader;  
+import java.io.StringWriter;  
+import java.util.HashMap;  
+import java.util.Map;  
+  
+import freemarker.template.Configuration;  
+import freemarker.template.Template;  
+import freemarker.template.TemplateException;  
+  
+public class aaa {  
+  
+    public static void main(String[] args) throws TemplateException, IOException {  
+        Map<String, String> map=new HashMap<String, String>();  
+        map.put("username", "lisi");  
+        String templateString="${username}/zhangsan";  
+        StringWriter result = new StringWriter();  
+        Template t = new Template("name1", new StringReader(templateString), new Configuration());  
+        t.process(map, result);  
+        System.out.println(result.toString());  
+    }  
+      
+}  
